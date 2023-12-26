@@ -1,0 +1,22 @@
+name: Run Docs Scraper
+
+on:
+  schedule:
+  - cron: "30 9 * * *"
+  
+jobs:
+  cron:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+    - name: Run scraper
+      env:
+        HOST_URL: https://meilsearch.whatap.io
+        API_KEY: dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk
+        CONFIG_FILE_PATH: ./whatap-docs.json
+      run: |
+        docker run -t --rm \
+          -e MEILISEARCH_HOST_URL=$HOST_URL \
+          -e MEILISEARCH_API_KEY=$API_KEY \
+          -v $CONFIG_FILE_PATH \
+          getmeili/docs-scraper:latest pipenv run ./docs_scraper $CONFIG_FILE_PATH
