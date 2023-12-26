@@ -1,8 +1,11 @@
 name: Run Docs Scraper
 
 on:
-  schedule:
-  - cron: "30 9 * * *"
+  # schedule:
+  # - cron: "30 9 * * *"
+  push:
+    branches: 
+      -main
   
 jobs:
   cron:
