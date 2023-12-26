@@ -46,17 +46,25 @@ This scraper is used in production and runs on the [Meilisearch documentation](h
 
 ## Table of Contents <!-- omit in TOC -->
 
+- [Table of Contents](#table-of-contents-)
 - [⚡ Supercharge your Meilisearch experience](#-supercharge-your-meilisearch-experience)
 - [⚙️ Usage](#️-usage)
   - [Run your Meilisearch Instance](#run-your-meilisearch-instance)
   - [Set your Config File](#set-your-config-file)
   - [Run the Scraper](#run-the-scraper)
+    - [From Source Code](#from-source-code-)
+    - [With Docker](#with-docker-)
+    - [In a GitHub Action](#in-a-github-action-)
+    - [About the API Key](#about-the-api-key-)
 - [🖌 And for the front-end search bar?](#-and-for-the-front-end-search-bar)
 - [🛠 More Configurations](#-more-configurations)
   - [More About the Selectors](#more-about-the-selectors)
+    - [Bases](#bases-)
+    - [The Levels](#the-levels-)
   - [All the Config File Settings](#all-the-config-file-settings)
     - [`index_uid`](#index_uid)
     - [`start_urls`](#start_urls)
+      - [Using Page Rank](#using-page-rank-)
     - [`stop_urls` (optional)](#stop_urls-optional)
     - [`selectors_key` (optional)](#selectors_key-optional)
     - [`scrape_start_urls` (optional)](#scrape_start_urls-optional)
@@ -64,17 +72,20 @@ This scraper is used in production and runs on the [Meilisearch documentation](h
     - [`sitemap_alternate_links` (optional)](#sitemap_alternate_links-optional)
     - [`selectors_exclude` (optional)](#selectors_exclude-optional)
     - [`custom_settings` (optional)](#custom_settings-optional)
+      - [Example:](#example)
     - [`min_indexed_level` (optional)](#min_indexed_level-optional)
     - [`only_content_level` (optional)](#only_content_level-optional)
     - [`js_render` (optional)](#js_render-optional)
     - [`js_wait` (optional)](#js_wait-optional)
     - [`allowed_domains` (optional)](#allowed_domains-optional)
   - [Authentication](#authentication)
+    - [Basic HTTP](#basic-http-)
+    - [Cloudflare Access: Identity and Access Management](#cloudflare-access-identity-and-access-management-)
+    - [Keycloak Access: Identity and Access Management](#keycloak-access-identity-and-access-management-)
   - [Installing Chrome Headless](#installing-chrome-headless)
 - [🤖 Compatibility with Meilisearch](#-compatibility-with-meilisearch)
 - [⚙️ Development Workflow and Contributing](#️-development-workflow-and-contributing)
 - [Credits](#credits)
-
 
 ## ⚡ Supercharge your Meilisearch experience
 
@@ -104,8 +115,7 @@ There are [other ways to install Meilisearch](https://www.meilisearch.com/docs/l
 The host URL and the API key you will provide in the next steps correspond to the credentials of this Meilisearch instance.
 In the example above, the host URL is `http://localhost:7700` and the API key is `myMasterKey`.
 
-_Meilisearch is open-source and can run either on your server or on any cloud provider. Here is a tutorial to [run Meilisearch in production](https://www.meilisearch.com/docs/learn/cookbooks/running-production/)._
-
+*Meilisearch is open-source and can run either on your server or on any cloud provider. Here is a tutorial to [run Meilisearch in production](https://www.meilisearch.com/docs/learn/cookbooks/running-production/).*
 
 ### Set your Config File
 
@@ -139,6 +149,7 @@ Here is an example of a basic config file:
   }
 }
 ```
+
 The `index_uid` field is the index identifier in your Meilisearch instance in which your website content is stored. The scraping tool will create a new index if it does not exist.
 
 The `docs-content` class (the `.` means this is a class) is the main container of the textual content in this example. Most of the time, this tag is a `<main>` or an `<article>` HTML element.
@@ -149,9 +160,9 @@ Every searchable `lvl` elements outside this main documentation container (for i
 
 You can also check out the [config file](https://github.com/meilisearch/documentation/blob/main/docs-scraper.config.json) we use in production for our own documentation site.<br>
 
-💡 _To better understand the selectors, go to [this section](#more-about-the-selectors)._
+💡 *To better understand the selectors, go to [this section](#more-about-the-selectors).*
 
-🔨 _There are many other fields you can set in the config file that allow you to adapt the scraper to your need. Check out [this section](#all-the-config-file-settings)._
+🔨 *There are many other fields you can set in the config file that allow you to adapt the scraper to your need. Check out [this section](#all-the-config-file-settings).*
 
 ### Run the Scraper
 
@@ -165,6 +176,7 @@ Set both environment variables `MEILISEARCH_HOST_URL` and `MEILISEARCH_API_KEY`.
 Following on from the example in the [first step](#run-your-meilisearch-instance), they are respectively `http://localhost:7700` and `myMasterKey`.
 
 Then, run:
+
 ```bash
 pipenv install
 pipenv run ./docs_scraper <path-to-your-config-file>
@@ -218,13 +230,14 @@ Here is the [GitHub Action file](https://github.com/meilisearch/documentation/bl
 The API key you must provide should have the permissions to add documents into your Meilisearch instance.<br>
 In a production environment, we recommend providing the private key instead of the master key, as it is safer and it has enough permissions to perform such requests.
 
-_More about [Meilisearch authentication](https://www.meilisearch.com/docs/learn/security/master_api_keys). _
+_More about [Meilisearch authentication](https://www.meilisearch.com/docs/learn/security/master_api_keys)._
 
 ## 🖌 And for the front-end search bar?
 
 After having scraped your documentation, you might need a search bar to improve your user experience!
 
 About the front part:
+
 - If your website is a VuePress application, check out the [vuepress-plugin-meilisearch](https://github.com/meilisearch/vuepress-plugin-meilisearch) repository.
 - For all kinds of documentation, check out the [docs-searchbar.js](https://github.com/meilisearch/docs-searchbar.js) library.
 
@@ -295,6 +308,7 @@ The scraper will recursively follow any links (`<a>` tags) from those pages. It 
   "start_urls": ["https://www.example.com/docs"]
 }
 ```
+
 ##### Using Page Rank <!-- omit in TOC -->
 
 This parameter gives more weight to some pages and helps to boost records built from the page.<br>
@@ -434,7 +448,8 @@ This can be used to remove a table of content, a sidebar, or a footer, to make o
 
 This field can be used to add Meilisearch settings.
 
-##### Example:
+##### Example
+
 ```json
 "custom_settings": {
     "synonyms": {
@@ -451,7 +466,6 @@ This field can be used to add Meilisearch settings.
 ```
 
 Learn more about `filterableAttributes`, `synonyms`, `stop-words` and all available settings in the [Meilisearch documentation](https://meilisearch.com/docs/reference/api/settings#settings-object).
-
 
 #### `min_indexed_level` (optional)
 
@@ -513,11 +527,12 @@ This setting specifies the domains that the scraper is allowed to access. In mos
 
 ### Authentication
 
-__WARNING:__ Please be aware that the scraper will send authentication headers to every scraped site, so use `allowed_domains` to adjust the scope accordingly!
+**WARNING:** Please be aware that the scraper will send authentication headers to every scraped site, so use `allowed_domains` to adjust the scope accordingly!
 
 #### Basic HTTP <!-- omit in TOC -->
 
 Basic HTTP authentication is supported by setting these environment variables:
+
 - `DOCS_SCRAPER_BASICAUTH_USERNAME`
 - `DOCS_SCRAPER_BASICAUTH_PASSWORD`
 
@@ -528,6 +543,7 @@ If it happens to you to scrape sites protected by Cloudflare Access, you have to
 Values for these headers are taken from env variables `CF_ACCESS_CLIENT_ID` and `CF_ACCESS_CLIENT_SECRET`.
 
 In case of Google Cloud Identity-Aware Proxy, please specify these env variables:
+
 - `IAP_AUTH_CLIENT_ID` - # pick [client ID of the application](https://console.cloud.google.com/apis/credentials) you are connecting to
 - `IAP_AUTH_SERVICE_ACCOUNT_JSON` - # generate in [Actions](https://console.cloud.google.com/iam-admin/serviceaccounts) -> Create key -> JSON
 
@@ -535,7 +551,7 @@ In case of Google Cloud Identity-Aware Proxy, please specify these env variables
 
 If you need to scrape site protected by [Keycloak](https://github.com/keycloak/keycloak) (Gatekeeper), you have to provide a valid access token.
 
-If you set the environment variables `KC_URL`, `KC_REALM`, `KC_CLIENT_ID`, and `KC_CLIENT_SECRET` the scraper authenticates itself against Keycloak using _Client Credentials Grant_ and adds the resulting access token as `Authorization` HTTP header to each scraping request.
+If you set the environment variables `KC_URL`, `KC_REALM`, `KC_CLIENT_ID`, and `KC_CLIENT_SECRET` the scraper authenticates itself against Keycloak using *Client Credentials Grant* and adds the resulting access token as `Authorization` HTTP header to each scraping request.
 
 ### Installing Chrome Headless
 
