@@ -9,9 +9,9 @@ on:
   
 jobs:
   cron:
-    runs-on: cronubuntu-latest-18.04
+    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@master
       - name: Run scraper
         env:
           HOST_URL: https://meilsearch.whatap.io
