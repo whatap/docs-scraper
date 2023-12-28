@@ -1,11 +1,16 @@
 name: Run Docs Scraper
 
 on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Deployment?"
+        default: "WhaTap"
   # schedule:
   # - cron: "30 9 * * *"
-  push:
-    branches: 
-      -main
+  # push:
+  #   branches: 
+  #     -main
   
 jobs:
   cron:
