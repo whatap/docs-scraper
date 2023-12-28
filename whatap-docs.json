@@ -87,7 +87,7 @@
       "Log": [ "로그" ],
       "로그": [ "Log", "log" ],
       "Java": [ "자바" ],
-      "자바": ["Java", "java"]
+      "자바": [ "Java", "java" ]
     }
   },
   "selectors": {
