@@ -19,10 +19,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run scraper
-        run:
-          CONFIG_DIR="$PWD/whatap-docs.json"
+        env:
+          HOST_URL: https://meilsearch.whatap.io
+          API_KEY: dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk
+          CONFIG_FILE_PATH: ${{ github.workspace }}\whatap-docs.json
+        run: |
           docker run -t --rm \
-            -e MEILISEARCH_HOST_URL='https://meilsearch.whatap.io' \
-            -e MEILISEARCH_API_KEY='dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk' \
-            -v $CONFIG_DIR/whatap-docs.json:/docs-scraper/whatap-docs.json \
+            -e MEILISEARCH_HOST_URL=$HOST_URL \
+            -e MEILISEARCH_API_KEY=$API_KEY \
+            -v $CONFIG_FILE_PATH:/docs-scraper/whatap-docs.json \
             getmeili/docs-scraper:latest pipenv run ./docs_scraper whatap-docs.json
