@@ -82,7 +82,13 @@
     "https://docs.whatap.io/ja/dl-release-notes"
   ],
   "custom_settings": {
-    "filterableAttributes": ["lang"]
+    "filterableAttributes": ["lang"],
+    "synonyms": {
+      "Log": [ "로그" ],
+      "로그": [ "Log", "log" ],
+      "Java": [ "자바" ],
+      "자바": ["Java", "java"]
+    }
   },
   "selectors": {
     "default": {
