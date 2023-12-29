@@ -86,6 +86,14 @@
   ],
   "custom_settings": {
     "filterableAttributes": ["lang"],
+    "rankingRules": [
+      "proximity",
+      "words",
+      "exactness",
+      "typo",
+      "attribute",
+      "sort"
+    ],
     "synonyms": {
       "Log": [ "로그" ],
       "로그": [ "Log", "log" ],
