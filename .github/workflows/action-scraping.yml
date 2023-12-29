@@ -1,4 +1,4 @@
-name: Run Docs Scraper
+name: Run Docs Scraper(Manual)
 
 on:
   workflow_dispatch:
