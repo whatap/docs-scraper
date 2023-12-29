@@ -82,7 +82,10 @@
     "https://docs.whatap.io/ja/kubernetes/_docker-build",
     "https://docs.whatap.io/dl-release-notes",
     "https://docs.whatap.io/en/dl-release-notes",
-    "https://docs.whatap.io/ja/dl-release-notes"
+    "https://docs.whatap.io/ja/dl-release-notes",
+    "https://docs.whatap.io/reference",
+    "https://docs.whatap.io/en/reference",
+    "https://docs.whatap.io/ja/reference",
   ],
   "custom_settings": {
     "filterableAttributes": ["lang", "hierarchy_lvl0"],
