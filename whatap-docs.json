@@ -85,7 +85,7 @@
     "https://docs.whatap.io/ja/dl-release-notes"
   ],
   "custom_settings": {
-    "filterableAttributes": ["lang"],
+    "filterableAttributes": ["lang", "hierarchy_lvl0"],
     "rankingRules": [
       "proximity",
       "words",
