@@ -26,11 +26,6 @@
       "page_rank": 3
     },
     {
-      "url": "https://docs.whatap.io/en/release-notes/",
-      "extra_attributes": { "lang": ["en"] },
-      "page_rank": 1
-    },
-    {
       "url": "https://docs.whatap.io/ja/",
       "extra_attributes": { "lang": ["ja"] }
     },
@@ -55,11 +50,6 @@
       "page_rank": 3
     },
     {
-      "url": "https://docs.whatap.io/ja/release-notes/",
-      "extra_attributes": { "lang": ["ja"] },
-      "page_rank": 1
-    },
-    {
       "url": "https://docs.whatap.io/",
       "extra_attributes": { "lang": ["ko"] }
     },
@@ -82,11 +72,6 @@
       "url": "https://docs.whatap.io/mysql/",
       "extra_attributes": { "lang": ["ko"] },
       "page_rank": 3
-    },
-    {
-      "url": "https://docs.whatap.io/release-notes/",
-      "extra_attributes": { "lang": ["ko"] },
-      "page_rank": 1
     }
   ],
   "sitemap_urls": [
