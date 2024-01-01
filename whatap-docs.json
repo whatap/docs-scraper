@@ -16,6 +16,16 @@
       "page_rank": 5
     },
     {
+      "url": "https://docs.whatap.io/en/postgresql/",
+      "extra_attributes": { "lang": ["en"] },
+      "page_rank": 3
+    },
+    {
+      "url": "https://docs.whatap.io/en/mysql/",
+      "extra_attributes": { "lang": ["en"] },
+      "page_rank": 3
+    },
+    {
       "url": "https://docs.whatap.io/ja/",
       "extra_attributes": { "lang": ["ja"] }
     },
@@ -28,6 +38,16 @@
       "url": "https://docs.whatap.io/ja/log/",
       "extra_attributes": { "lang": ["ja"] },
       "page_rank": 5
+    },
+    {
+      "url": "https://docs.whatap.io/ja/postgresql/",
+      "extra_attributes": { "lang": ["ja"] },
+      "page_rank": 3
+    },
+    {
+      "url": "https://docs.whatap.io/ja/mysql/",
+      "extra_attributes": { "lang": ["ja"] },
+      "page_rank": 3
     },
     {
       "url": "https://docs.whatap.io/",
@@ -49,28 +69,8 @@
       "page_rank": 3
     },
     {
-      "url": "https://docs.whatap.io/en/postgresql/",
-      "extra_attributes": { "lang": ["en"] },
-      "page_rank": 3
-    },
-    {
-      "url": "https://docs.whatap.io/ja/postgresql/",
-      "extra_attributes": { "lang": ["ja"] },
-      "page_rank": 3
-    },
-    {
       "url": "https://docs.whatap.io/mysql/",
       "extra_attributes": { "lang": ["ko"] },
-      "page_rank": 3
-    },
-    {
-      "url": "https://docs.whatap.io/en/mysql/",
-      "extra_attributes": { "lang": ["en"] },
-      "page_rank": 3
-    },
-    {
-      "url": "https://docs.whatap.io/ja/mysql/",
-      "extra_attributes": { "lang": ["ja"] },
       "page_rank": 3
     }
   ],
