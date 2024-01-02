@@ -189,7 +189,7 @@
     "default": {
       "lvl0": {
         "selector": "nav.theme-doc-breadcrumbs ul li:nth-of-type(2) span",
-        "global": true
+        "global": true,
         "default_value": "Documentation"
       },
       "lvl1": "header h1",
