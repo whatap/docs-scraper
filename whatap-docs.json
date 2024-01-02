@@ -124,8 +124,8 @@
       "proximity",
       "words",
       "exactness",
-      "typo",
-      "sort"
+      "sort",
+      "typo"
     ],
     "synonyms": {
       "Log": [ "로그" ],
