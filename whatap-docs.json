@@ -133,7 +133,13 @@
     "https://docs.whatap.io/ja/dl-release-notes",
     "https://docs.whatap.io/reference",
     "https://docs.whatap.io/en/reference",
-    "https://docs.whatap.io/ja/reference"
+    "https://docs.whatap.io/ja/reference",
+    "https://docs.whatap.io/npm/set-agent",
+    "https://docs.whatap.io/en/npm/set-agent",
+    "https://docs.whatap.io/ja/npm/set-agent",
+    "https://docs.whatap.io/log/log-intro",
+    "https://docs.whatap.io/en/log/log-intro",
+    "https://docs.whatap.io/ja/log/log-intro"
   ],
   "custom_settings": {
     "filterableAttributes": ["lang", "hierarchy_lvl0"],
@@ -189,7 +195,6 @@
     "default": {
       "lvl0": {
         "selector": "nav.theme-doc-breadcrumbs ul li:nth-of-type(2) span",
-        "global": true,
         "default_value": "Documentation"
       },
       "lvl1": "header h1",
