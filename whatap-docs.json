@@ -235,7 +235,7 @@
     },
     "release": {
       "lvl0": {
-        "selector": "ul.theme-doc-sidebar-menu li.theme-doc-sidebar-item-category-level-1 > div.menu__list-item-collapsible > a.menu__link",
+        "selector": "",
         "default_value": "Release notes"
       },
       "lvl1": "header h1",
