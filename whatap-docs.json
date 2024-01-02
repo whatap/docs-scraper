@@ -203,7 +203,7 @@
     "release": {
       "lvl0": {
         "selector": "ul.theme-doc-sidebar-menu li.theme-doc-sidebar-item-category-level-1 > div.menu__list-item-collapsible > a.menu__link",
-        "default_value": "Documentation"
+        "default_value": "Release notes"
       },
       "lvl1": "header h1",
       "lvl2": "article h2",
