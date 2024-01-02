@@ -122,10 +122,10 @@
     "rankingRules": [
       "proximity",
       "words",
+      "sort",
       "exactness",
       "typo",
-      "attribute",
-      "sort"
+      "attribute"
     ],
     "synonyms": {
       "Log": [ "로그" ],
