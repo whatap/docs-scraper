@@ -3,107 +3,89 @@
   "start_urls": [
     {
       "url": "https://docs.whatap.io/en/",
-      "extra_attributes": { "lang": ["en"] },
-      "selectors_key": "docs"
+      "extra_attributes": { "lang": ["en"] }
     },
     {
       "url": "https://docs.whatap.io/en/java/",
       "extra_attributes": { "lang": ["en"] },
-      "selectors_key": "docs",
       "page_rank": 4
     },
     {
       "url": "https://docs.whatap.io/en/log/",
       "extra_attributes": { "lang": ["en"] },
-      "selectors_key": "docs",
       "page_rank": 5
     },
     {
       "url": "https://docs.whatap.io/en/postgresql/",
       "extra_attributes": { "lang": ["en"] },
-      "selectors_key": "docs",
       "page_rank": 3
     },
     {
       "url": "https://docs.whatap.io/en/mysql/",
       "extra_attributes": { "lang": ["en"] },
-      "selectors_key": "docs",
       "page_rank": 3
     },
     {
       "url": "https://docs.whatap.io/en/release-notes/",
       "extra_attributes": { "lang": ["en"] },
-      "selectors_key": "release",
       "page_rank": 1
     },
     {
       "url": "https://docs.whatap.io/ja/",
-      "extra_attributes": { "lang": ["ja"] },
-      "selectors_key": "docs"
+      "extra_attributes": { "lang": ["ja"] }
     },
     {
       "url": "https://docs.whatap.io/ja/java/",
       "extra_attributes": { "lang": ["ja"] },
-      "selectors_key": "docs",
       "page_rank": 4
     },
     {
       "url": "https://docs.whatap.io/ja/log/",
       "extra_attributes": { "lang": ["ja"] },
-      "selectors_key": "docs",
       "page_rank": 5
     },
     {
       "url": "https://docs.whatap.io/ja/postgresql/",
       "extra_attributes": { "lang": ["ja"] },
-      "selectors_key": "docs",
       "page_rank": 3
     },
     {
       "url": "https://docs.whatap.io/ja/mysql/",
       "extra_attributes": { "lang": ["ja"] },
-      "selectors_key": "docs",
       "page_rank": 3
     },
     {
       "url": "https://docs.whatap.io/ja/release-notes/",
       "extra_attributes": { "lang": ["ja"] },
-      "selectors_key": "release",
       "page_rank": 1
     },
     {
       "url": "https://docs.whatap.io/",
-      "extra_attributes": { "lang": ["ko"] },
-      "selectors_key": "docs"
+      "extra_attributes": { "lang": ["ko"] }
     },
     {
       "url": "https://docs.whatap.io/java/",
       "extra_attributes": { "lang": ["ko"] },
-      "selectors_key": "docs",
       "page_rank": 4
     },
     {
       "url": "https://docs.whatap.io/log/",
       "extra_attributes": { "lang": ["ko"] },
-      "selectors_key": "docs",
       "page_rank": 5
     },
     {
       "url": "https://docs.whatap.io/postgresql/",
       "extra_attributes": { "lang": ["ko"] },
-      "selectors_key": "docs",
       "page_rank": 3
     },
     {
       "url": "https://docs.whatap.io/mysql/",
       "extra_attributes": { "lang": ["ko"] },
-      "selectors_key": "docs",
       "page_rank": 3
     },
     {
       "url": "https://docs.whatap.io/release-notes/",
       "extra_attributes": { "lang": ["ko"] },
-      "selectors_key": "release",
       "page_rank": 1
     }
   ],
@@ -210,33 +192,8 @@
     "default": {
       "lvl0": {
         "selector": "nav.theme-doc-breadcrumbs ul li:nth-of-type(2) span",
+        "global": true,
         "default_value": "Documentation"
-      },
-      "lvl1": "header h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article .markdown p, article .markdown li, article .markdown td:last-child"
-    },
-    "docs": {
-      "lvl0": {
-        "selector": "nav.theme-doc-breadcrumbs ul li:nth-of-type(2) span",
-        "default_value": "Documentation"
-      },
-      "lvl1": "header h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article .markdown p, article .markdown li, article .markdown td:last-child"
-    },
-    "release": {
-      "lvl0": {
-        "selector": "",
-        "default_value": "Release notes"
       },
       "lvl1": "header h1",
       "lvl2": "article h2",
