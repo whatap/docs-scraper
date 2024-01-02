@@ -125,7 +125,7 @@
       "exactness",
       "typo",
       "attribute",
-      "rank:asc"
+      "sort"
     ],
     "synonyms": {
       "Log": [ "로그" ],
