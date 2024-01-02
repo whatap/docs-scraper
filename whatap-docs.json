@@ -120,12 +120,12 @@
   "custom_settings": {
     "filterableAttributes": ["lang", "hierarchy_lvl0"],
     "rankingRules": [
+      "attribute",
       "proximity",
       "words",
-      "sort",
       "exactness",
       "typo",
-      "attribute"
+      "sort"
     ],
     "synonyms": {
       "Log": [ "로그" ],
