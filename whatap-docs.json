@@ -28,8 +28,8 @@
     {
       "url": "https://docs.whatap.io/en/release-notes/",
       "extra_attributes": { "lang": ["en"] },
-      "page_rank": 1,
-      "selectors_key": "release"
+      "selectors_key": "release",
+      "page_rank": 1
     },
     {
       "url": "https://docs.whatap.io/ja/",
@@ -58,8 +58,8 @@
     {
       "url": "https://docs.whatap.io/ja/release-notes/",
       "extra_attributes": { "lang": ["ja"] },
-      "page_rank": 1,
-      "selectors_key": "release"
+      "selectors_key": "release",
+      "page_rank": 1
     },
     {
       "url": "https://docs.whatap.io/",
@@ -88,8 +88,8 @@
     {
       "url": "https://docs.whatap.io/release-notes/",
       "extra_attributes": { "lang": ["ko"] },
-      "page_rank": 1,
-      "selectors_key": "release"
+      "selectors_key": "release",
+      "page_rank": 1
     }
   ],
   "sitemap_urls": [
@@ -203,7 +203,6 @@
     "release": {
       "lvl0": {
         "selector": "ul.theme-doc-sidebar-menu li.theme-doc-sidebar-item-category-level-1 > div.menu__list-item-collapsible > a.menu__link",
-        "global": true,
         "default_value": "Documentation"
       },
       "lvl1": "header h1",
