@@ -14,6 +14,7 @@ jobs:
         run: |
           curl \
             -X POST 'https://meilsearch.whatap.io/swap-indexes' \
+            -H "Authorization: Bearer dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk" \
             -H 'Content-Type: application/json' \
             --data-binary '[ { "indexes": [ "whatap-temp", "whatap" ] } ]'
       - name: Run scraper
@@ -31,5 +32,6 @@ jobs:
         run: |
           curl \
             -X POST 'https://meilsearch.whatap.io/swap-indexes' \
+            -H "Authorization: Bearer dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk" \
             -H 'Content-Type: application/json' \
             --data-binary '[ { "indexes": [ "whatap", "whatap-temp" ] } ]'
