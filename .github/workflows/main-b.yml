@@ -27,3 +27,9 @@ jobs:
             -e MEILISEARCH_API_KEY=$API_KEY \
             -v $CONFIG_FILE_PATH:/docs-scraper/config.json \
             getmeili/docs-scraper:latest pipenv run ./docs_scraper config.json
+      - name: Swap index
+        run: |
+          curl \
+            -X POST 'https://meilsearch.whatap.io/swap-indexes' \
+            -H 'Content-Type: application/json' \
+            --data-binary '[ { "indexes": [ "whatap", "whatap-temp" ] } ]'
