@@ -17,7 +17,7 @@ jobs:
         env:
           HOST_URL: https://meilsearch.whatap.io
           API_KEY: dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk
-          CONFIG_FILE_PATH: ${{ github.workspace }}/whatap-docs.json
+          CONFIG_FILE_PATH: ${{ github.workspace }}/whatap-docs-temp.json
         run: |
           docker run -t --rm \
             -e MEILISEARCH_HOST_URL=$HOST_URL \

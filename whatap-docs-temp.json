@@ -1,0 +1,209 @@
+{
+  "index_uid": "whatap-temp",
+  "start_urls": [
+    {
+      "url": "https://docs.whatap.io/en/",
+      "extra_attributes": { "lang": ["en"] }
+    },
+    {
+      "url": "https://docs.whatap.io/en/java/",
+      "extra_attributes": { "lang": ["en"] },
+      "page_rank": 4
+    },
+    {
+      "url": "https://docs.whatap.io/en/log/",
+      "extra_attributes": { "lang": ["en"] },
+      "page_rank": 5
+    },
+    {
+      "url": "https://docs.whatap.io/en/postgresql/",
+      "extra_attributes": { "lang": ["en"] },
+      "page_rank": 3
+    },
+    {
+      "url": "https://docs.whatap.io/en/mysql/",
+      "extra_attributes": { "lang": ["en"] },
+      "page_rank": 3
+    },
+    {
+      "url": "https://docs.whatap.io/en/release-notes/",
+      "extra_attributes": { "lang": ["en"] },
+      "page_rank": 1
+    },
+    {
+      "url": "https://docs.whatap.io/ja/",
+      "extra_attributes": { "lang": ["ja"] }
+    },
+    {
+      "url": "https://docs.whatap.io/ja/java/",
+      "extra_attributes": { "lang": ["ja"] },
+      "page_rank": 4
+    },
+    {
+      "url": "https://docs.whatap.io/ja/log/",
+      "extra_attributes": { "lang": ["ja"] },
+      "page_rank": 5
+    },
+    {
+      "url": "https://docs.whatap.io/ja/postgresql/",
+      "extra_attributes": { "lang": ["ja"] },
+      "page_rank": 3
+    },
+    {
+      "url": "https://docs.whatap.io/ja/mysql/",
+      "extra_attributes": { "lang": ["ja"] },
+      "page_rank": 3
+    },
+    {
+      "url": "https://docs.whatap.io/ja/release-notes/",
+      "extra_attributes": { "lang": ["ja"] },
+      "page_rank": 1
+    },
+    {
+      "url": "https://docs.whatap.io/",
+      "extra_attributes": { "lang": ["ko"] }
+    },
+    {
+      "url": "https://docs.whatap.io/java/",
+      "extra_attributes": { "lang": ["ko"] },
+      "page_rank": 4
+    },
+    {
+      "url": "https://docs.whatap.io/log/",
+      "extra_attributes": { "lang": ["ko"] },
+      "page_rank": 5
+    },
+    {
+      "url": "https://docs.whatap.io/postgresql/",
+      "extra_attributes": { "lang": ["ko"] },
+      "page_rank": 3
+    },
+    {
+      "url": "https://docs.whatap.io/mysql/",
+      "extra_attributes": { "lang": ["ko"] },
+      "page_rank": 3
+    },
+    {
+      "url": "https://docs.whatap.io/release-notes/",
+      "extra_attributes": { "lang": ["ko"] },
+      "page_rank": 1
+    }
+  ],
+  "sitemap_urls": [
+    "https://docs.whatap.io/en/sitemap.xml",
+    "https://docs.whatap.io/ja/sitemap.xml",
+    "https://docs.whatap.io/sitemap.xml"
+  ],
+  "stop_urls": [
+    "https://docs.whatap.io/license/license-open-sources",
+    "https://docs.whatap.io/en/license/license-open-sources",
+    "https://docs.whatap.io/ja/license/license-open-sources",
+    "https://docs.whatap.io/license/license-open-sources-lib",
+    "https://docs.whatap.io/en/license/license-open-sources-lib",
+    "https://docs.whatap.io/ja/license/license-open-sources-lib",
+    "https://docs.whatap.io/license/license",
+    "https://docs.whatap.io/en/license/license",
+    "https://docs.whatap.io/ja/license/license",
+    "https://docs.whatap.io/tags/",
+    "https://docs.whatap.io/en/tags/",
+    "https://docs.whatap.io/ja/tags/",
+    "https://docs.whatap.io/common-items/",
+    "https://docs.whatap.io/en/common-items/",
+    "https://docs.whatap.io/ja/common-items/",
+    "https://docs.whatap.io/on-prem/",
+    "https://docs.whatap.io/en/on-prem/",
+    "https://docs.whatap.io/ja/on-prem/",
+    "https://docs.whatap.io/mysql-v1/",
+    "https://docs.whatap.io/en/mysql-v1/",
+    "https://docs.whatap.io/ja/mysql-v1/",
+    "https://docs.whatap.io/postgresql-v1/",
+    "https://docs.whatap.io/en/postgresql-v1/",
+    "https://docs.whatap.io/ja/postgresql-v1/",
+    "https://docs.whatap.io/java/install-agent-with-buildpack",
+    "https://docs.whatap.io/en/java/install-agent-with-buildpack",
+    "https://docs.whatap.io/ja/java/install-agent-with-buildpack",
+    "https://docs.whatap.io/kubernetes/_docker-build",
+    "https://docs.whatap.io/en/kubernetes/_docker-build",
+    "https://docs.whatap.io/ja/kubernetes/_docker-build",
+    "https://docs.whatap.io/dl-release-notes",
+    "https://docs.whatap.io/en/dl-release-notes",
+    "https://docs.whatap.io/ja/dl-release-notes",
+    "https://docs.whatap.io/reference",
+    "https://docs.whatap.io/en/reference",
+    "https://docs.whatap.io/ja/reference",
+    "https://docs.whatap.io/npm/set-agent",
+    "https://docs.whatap.io/en/npm/set-agent",
+    "https://docs.whatap.io/ja/npm/set-agent",
+    "https://docs.whatap.io/log/log-intro",
+    "https://docs.whatap.io/en/log/log-intro",
+    "https://docs.whatap.io/ja/log/log-intro"
+  ],
+  "custom_settings": {
+    "filterableAttributes": ["lang", "hierarchy_lvl0"],
+    "rankingRules": [
+      "attribute",
+      "proximity",
+      "words",
+      "exactness",
+      "sort",
+      "typo"
+    ],
+    "synonyms": {
+      "Log": [ "로그" ],
+      "로그": [ "Log", "log" ],
+      "Java": [ "자바" ],
+      "자바": [ "Java", "java" ],
+      "Python": [ "파이썬" ],
+      "파이썬": [ "Python", "python" ],
+      "PHP": [ "피에이치피", "php" ],
+      "피에이치피": [ "php", "PHP"],
+      "Node.js": [ "노드js", "노드제이에스", "node.js" ],
+      "노드js": [ "Node.js", "node.js"],
+      "Go": [ "고", "golang", "go" ],
+      "고": [ "Go", "golang", "go" ],
+      ".NET": [ ".net", "닷넷", "dotnet" ],
+      "닷넷": [ ".NET", ".net", "dotnet" ],
+      "Server": [ "서버" ],
+      "서버": [ "Server" ],
+      "Kubernetes": [ "쿠버네티스", "K8s", "k8s", "쿠버", "kubernetes" ],
+      "쿠버네티스": [ "Kubernetes", "kubernetes", "K8s", "k8s", "쿠버" ],
+      "Database": [ "데이터베이스", "db", "database", "DB" ],
+      "데이터베이스": [ "Database", "db", "database", "DB" ],
+      "PostgreSQL": [ "포스트그레", "PGSQL", "postgresql" ],
+      "포스트그레": [ "PostgreSQL", "PGSQL" ],
+      "Oracle": [ "오라클", "oracle" ],
+      "오라클": [ "Oracle", "oracle" ],
+      "MySQL": [ "mysql" ],
+      "Network Performance Monitoring": [ "네트워크 성능 모니터링", "네트워크 성능", "NPM", "npm" ],
+      "네트워크 성능 모니터링": [ "Network Performance Monitoring", "네트워크 성능", "NPM", "npm" ],
+      "AWS Log": [ "AWS 로그", "aws log" ],
+      "AWS 로그": [ "AWS Log", "aws log" ],
+      "Browser": [ "브라우저", "browser" ],
+      "브라우저": [ "Browser", "browser" ],
+      "Tibero": [ "티베로", "tibero" ],
+      "티베로": [ "Tibero", "tibero" ],
+      "SQL Server": [ "MS SQL", "엠에스" ],
+      "MS SQL": [ "SQL Server", "엠에스" ],
+      "Amazon": [ "아마존", "amazon" ],
+      "아마존": [ "Amazon", "amazon" ]
+    }
+  },
+  "selectors": {
+    "default": {
+      "lvl0": {
+        "selector": "nav.theme-doc-breadcrumbs ul li:nth-of-type(2) span",
+        "global": true,
+        "default_value": "Documentation"
+      },
+      "lvl1": "header h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article .markdown p, article .markdown li, article .markdown td:last-child"
+    }
+  },
+  "strip_chars": " .,;:#",
+  "scrape_start_urls": false
+}
