@@ -7,7 +7,7 @@ on:
   #       description: "Deployment?"
   #       default: "WhaTap"
   schedule:
-  - cron: "30 9 * * *"
+  - cron: "0 15 * * *"
   # push:
   #   branches: 
   #     -main
