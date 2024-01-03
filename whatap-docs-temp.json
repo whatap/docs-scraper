@@ -187,7 +187,9 @@
       "Amazon": [ "아마존", "amazon" ],
       "아마존": [ "Amazon", "amazon" ],
       "Naver": [ "네이버", "naver" ],
-      "네이버": [ "Naver", "naver" ]
+      "네이버": [ "Naver", "naver" ],
+      "Cloud": [ "클라우드", "cloud" ],
+      "클라우드": [ "Cloud", "cloud" ]
     }
   },
   "selectors": {
