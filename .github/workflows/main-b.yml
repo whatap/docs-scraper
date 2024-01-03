@@ -1,11 +1,8 @@
-name: Run Docs Scraper(Manual)
+name: Run Docs Scraper 0800
 
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: "Deployment?"
-        default: "WhaTap"
+  schedule:
+  - cron: "0 23 * * *"
   
 jobs:
   cron:
@@ -13,6 +10,12 @@ jobs:
     name: scraping docs
     steps:
       - uses: actions/checkout@v4
+      - name: Swap index
+        run: |
+          curl \
+            -X POST 'https://meilsearch.whatap.io/swap-indexes' \
+            -H 'Content-Type: application/json' \
+            --data-binary '[ { "indexes": [ "whatap", "whatap-temp" ] } ]'
       - name: Run scraper
         env:
           HOST_URL: https://meilsearch.whatap.io
@@ -24,4 +27,3 @@ jobs:
             -e MEILISEARCH_API_KEY=$API_KEY \
             -v $CONFIG_FILE_PATH:/docs-scraper/config.json \
             getmeili/docs-scraper:latest pipenv run ./docs_scraper config.json
-
