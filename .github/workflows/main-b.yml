@@ -15,7 +15,7 @@ jobs:
           curl \
             -X POST 'https://meilsearch.whatap.io/swap-indexes' \
             -H 'Content-Type: application/json' \
-            --data-binary '[ { "indexes": [ "whatap", "whatap-temp" ] } ]'
+            --data-binary '[ { "indexes": [ "whatap-temp", "whatap" ] } ]'
       - name: Run scraper
         env:
           HOST_URL: https://meilsearch.whatap.io
