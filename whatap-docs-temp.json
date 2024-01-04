@@ -208,7 +208,7 @@
       "text": "article .markdown p, article .markdown li, article .markdown td:last-child"
     }
   },
-  "selectors_exclude": [ "article.margin-bottom--lg" ],
+  "selectors_exclude": [ "article.margin-bottom--lg > *" ],
   "strip_chars": " .,;:#",
   "scrape_start_urls": false
 }
