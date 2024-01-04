@@ -1,5 +1,5 @@
 {
-  "index_uid": "whatap",
+  "index_uid": "whatap-temp",
   "selectors_exclude": [ "article.margin-bottom--lg h2", "article.margin-bottom--lg p" ],
   "start_urls": [
     {

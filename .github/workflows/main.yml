@@ -10,15 +10,6 @@ jobs:
     name: scraping docs
     steps:
       - uses: actions/checkout@v4
-      - name: Swap index
-        env:
-          API_KEY: dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk
-        run: |
-          curl \
-            -X POST 'https://meilsearch.whatap.io/swap-indexes' \
-            -H "Authorization: Bearer $API_KEY" \
-            -H 'Content-Type: application/json' \
-            --data-binary '[ { "indexes": [ "whatap", "whatap-temp" ] } ]'
       - name: Run scraper
         env:
           HOST_URL: https://meilsearch.whatap.io
