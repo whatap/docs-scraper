@@ -185,7 +185,11 @@
       "SQL Server": [ "MS SQL", "엠에스" ],
       "MS SQL": [ "SQL Server", "엠에스" ],
       "Amazon": [ "아마존", "amazon" ],
-      "아마존": [ "Amazon", "amazon" ]
+      "아마존": [ "Amazon", "amazon" ],
+      "Naver": [ "네이버", "naver" ],
+      "네이버": [ "Naver", "naver" ],
+      "Cloud": [ "클라우드", "cloud" ],
+      "클라우드": [ "Cloud", "cloud" ]
     }
   },
   "selectors": {
