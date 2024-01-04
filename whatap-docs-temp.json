@@ -1,5 +1,6 @@
 {
   "index_uid": "whatap-temp",
+  "selectors_exclude": [ "article.margin-bottom--lg > *" ],
   "start_urls": [
     {
       "url": "https://docs.whatap.io/en/",
@@ -208,7 +209,6 @@
       "text": "article .markdown p, article .markdown li, article .markdown td:last-child"
     }
   },
-  "selectors_exclude": [ "article.margin-bottom--lg > *" ],
   "strip_chars": " .,;:#",
   "scrape_start_urls": false
 }
