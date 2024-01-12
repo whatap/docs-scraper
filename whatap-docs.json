@@ -137,7 +137,10 @@
     "https://docs.whatap.io/ja/npm/set-agent",
     "https://docs.whatap.io/log/log-intro",
     "https://docs.whatap.io/en/log/log-intro",
-    "https://docs.whatap.io/ja/log/log-intro"
+    "https://docs.whatap.io/ja/log/log-intro",
+    "https://docs.whatap.io/opentelemetry",
+    "https://docs.whatap.io/en/opentelemetry",
+    "https://docs.whatap.io/ja/opentelemetry"
   ],
   "custom_settings": {
     "filterableAttributes": ["lang", "hierarchy_lvl0"],
