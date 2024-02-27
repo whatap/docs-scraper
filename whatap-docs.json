@@ -205,12 +205,15 @@
     "filterableAttributes": ["lang", "hierarchy_lvl0"],
     "rankingRules": [
       "attribute",
-      "proximity",
-      "words",
       "exactness",
+      "words",
       "sort",
+      "proximity",
       "typo"
     ],
+    "typoTolerance": {
+      "enabled": false
+    },
     "synonyms": {
       "Log": [ "로그" ],
       "로그": [ "Log", "log" ],
