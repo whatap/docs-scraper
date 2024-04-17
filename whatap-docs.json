@@ -204,7 +204,8 @@
       "Naver": [ "네이버", "naver" ],
       "네이버": [ "Naver", "naver" ],
       "Cloud": [ "클라우드", "cloud" ],
-      "클라우드": [ "Cloud", "cloud" ]
+      "클라우드": [ "Cloud", "cloud" ],
+      "Opentelemetry": [ "오픈텔레메트리", "opentelemetry"]
     }
   },
   "selectors": {
