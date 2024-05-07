@@ -183,6 +183,7 @@
       "로그": [ "Log", "log" ],
       "Java": [ "자바" ],
       "자바": [ "Java", "java" ],
+      "Tomcat": [ "Tomcat", "톰캣" ],
       "Python": [ "파이썬" ],
       "파이썬": [ "Python", "python" ],
       "PHP": [ "피에이치피", "php" ],
