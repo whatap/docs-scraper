@@ -3,6 +3,21 @@
   "selectors_exclude": [ "article.margin-bottom--lg h2", "article.margin-bottom--lg p" ],
   "start_urls": [
     {
+      "url": "https://docs.whatap.io/openapi-spec",
+      "extra_attributes": { "lang": ["ko"] }, 
+      "selectors_key": "openapi"
+    },
+    {
+      "url": "https://docs.whatap.io/en/openapi-spec-en",
+      "extra_attributes": { "lang": ["en"] }, 
+      "selectors_key": "openapi"
+    },
+    {
+      "url": "https://docs.whatap.io/ja/openapi-spec-ja",
+      "extra_attributes": { "lang": ["ja"] }, 
+      "selectors_key": "openapi"
+    },
+    {
       "url": "https://docs.whatap.io/en/",
       "extra_attributes": { "lang": ["en"] }
     },
@@ -222,6 +237,17 @@
       "lvl5": "article h5, article td:first-child",
       "lvl6": "article h6",
       "text": "article .markdown p, article .markdown li, article .markdown td:last-child"
+    },
+    "openapi": {
+      "lvl0":  {
+        "selector": null,
+        "default_value": "Open API"
+      },
+      "lvl1": "redocusaurus h1",
+      "lvl2": "redocusaurus h2",
+      "lvl3": "redocusaurus h3",
+      "text": "redocusaurus p"
+
     }
   },
   "strip_chars": " .,;:#",
