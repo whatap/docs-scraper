@@ -241,13 +241,13 @@
     },
     "openapi": {
       "lvl0":  {
-        "selector": null,
+        "selector": ".redocusaurus .api-info h1",
         "default_value": "Open API"
       },
-      "lvl1": "redocusaurus h1",
-      "lvl2": "redocusaurus h2",
-      "lvl3": "redocusaurus h3",
-      "text": "redocusaurus p"
+      "lvl1": ".redocusaurus h1",
+      "lvl2": ".redocusaurus h2",
+      "lvl3": ".redocusaurus h3",
+      "text": ".redocusaurus p"
 
     }
   },
