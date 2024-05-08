@@ -112,6 +112,12 @@
     "https://docs.whatap.io/sitemap.xml"
   ],
   "stop_urls": [
+    "https://docs.whatap.io/openapi-spec-en",
+    "https://docs.whatap.io/openapi-spec-ja",
+    "https://docs.whatap.io/en/openapi-spec",
+    "https://docs.whatap.io/en/openapi-spec-ja",
+    "https://docs.whatap.io/ja/openapi-spec",
+    "https://docs.whatap.io/ja/openapi-spec-en",
     "https://docs.whatap.io/openapi-old",
     "https://docs.whatap.io/apidoc/",
     "https://docs.whatap.io/en/openapi-old",
