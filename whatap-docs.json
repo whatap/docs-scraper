@@ -71,7 +71,7 @@
       "page_rank": 1
     },
     {
-      "url": "https://docs.whatap.io/openapi-spec",
+      "url": "https://docs.whatap.io/openapi-spec/",
       "extra_attributes": { "lang": ["ko"] }, 
       "selectors_key": "openapi"
     },
