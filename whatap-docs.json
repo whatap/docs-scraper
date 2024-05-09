@@ -3,16 +3,6 @@
   "selectors_exclude": [ "article.margin-bottom--lg h2", "article.margin-bottom--lg p" ],
   "start_urls": [
     {
-      "url": "https://docs.whatap.io/en/openapi-spec-en",
-      "extra_attributes": { "lang": ["en"] }, 
-      "selectors_key": "openapi-spec"
-    },
-    {
-      "url": "https://docs.whatap.io/ja/openapi-spec-ja",
-      "extra_attributes": { "lang": ["ja"] }, 
-      "selectors_key": "openapi-spec"
-    },
-    {
       "url": "https://docs.whatap.io/openapi-spec",
       "extra_attributes": { "lang": ["ko"] }, 
       "selectors_key": "openapi-spec"
