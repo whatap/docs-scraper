@@ -8,6 +8,16 @@
       "selectors_key": "openapi-spec"
     },
     {
+      "url": "https://docs.whatap.io/en/openapi-spec",
+      "extra_attributes": { "lang": ["en"] }, 
+      "selectors_key": "openapi-spec"
+    },
+    {
+      "url": "https://docs.whatap.io/ja/openapi-spec",
+      "extra_attributes": { "lang": ["ja"] }, 
+      "selectors_key": "openapi-spec"
+    },
+    {
       "url": "https://docs.whatap.io/en/",
       "extra_attributes": { "lang": ["en"] }
     },
