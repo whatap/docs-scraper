@@ -3,23 +3,13 @@
   "selectors_exclude": [ "article.margin-bottom--lg h2", "article.margin-bottom--lg p" ],
   "start_urls": [
     {
-      "url": "https://docs.whatap.io/openapi-spec",
-      "extra_attributes": { "lang": ["ko"] }, 
-      "selectors_key": "openapi-spec"
+      "url": "https://docs.whatap.io/en/",
+      "extra_attributes": { "lang": ["en"] }
     },
     {
       "url": "https://docs.whatap.io/en/openapi-spec",
       "extra_attributes": { "lang": ["en"] }, 
-      "selectors_key": "openapi-spec"
-    },
-    {
-      "url": "https://docs.whatap.io/ja/openapi-spec",
-      "extra_attributes": { "lang": ["ja"] }, 
-      "selectors_key": "openapi-spec"
-    },
-    {
-      "url": "https://docs.whatap.io/en/",
-      "extra_attributes": { "lang": ["en"] }
+      "selectors_key": "openapispec"
     },
     {
       "url": "https://docs.whatap.io/en/java/",
@@ -51,6 +41,11 @@
       "extra_attributes": { "lang": ["ja"] }
     },
     {
+      "url": "https://docs.whatap.io/ja/openapi-spec",
+      "extra_attributes": { "lang": ["ja"] }, 
+      "selectors_key": "openapispec"
+    },
+    {
       "url": "https://docs.whatap.io/ja/java/",
       "extra_attributes": { "lang": ["ja"] },
       "page_rank": 4
@@ -78,6 +73,11 @@
     {
       "url": "https://docs.whatap.io/",
       "extra_attributes": { "lang": ["ko"] }
+    },
+    {
+      "url": "https://docs.whatap.io/openapi-spec",
+      "extra_attributes": { "lang": ["ko"] }, 
+      "selectors_key": "openapispec"
     },
     {
       "url": "https://docs.whatap.io/java/",
@@ -239,7 +239,7 @@
       "lvl6": "article h6",
       "text": "article .markdown p, article .markdown li, article .markdown td:last-child"
     },
-    "openapi-spec": {
+    "openapispec": {
       "lvl0":  {
         "selector": ".redocusaurus .api-content .api-info h1",
         "default_value": "Open API"
