@@ -227,17 +227,17 @@
   "selectors": {
     "default": {
       "lvl0": {
-        "selector": "nav.theme-doc-breadcrumbs ul li:nth-of-type(2) span",
+        "selector": "nav.theme-doc-breadcrumbs ul li:nth-of-type(2) span | .redocusaurus .api-content .api-info h1",
         "global": true,
         "default_value": "Documentation"
       },
-      "lvl1": "header h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
+      "lvl1": "header h1 | .redocusaurus h1",
+      "lvl2": "article h2 | .redocusaurus h2",
+      "lvl3": "article h3 | .redocusaurus h3",
       "lvl4": "article h4",
       "lvl5": "article h5, article td:first-child",
       "lvl6": "article h6",
-      "text": "article .markdown p, article .markdown li, article .markdown td:last-child"
+      "text": "article .markdown p, article .markdown li, article .markdown td:last-child | .redocusaurus p"
     },
     "openapispec": {
       "lvl0":  {
