@@ -251,8 +251,6 @@
 
     }
   },
-  "js_render": true,
-  "js_wait": 1,
   "strip_chars": " .,;:#",
   "scrape_start_urls": false
 }
