@@ -1,6 +1,11 @@
 {
   "index_uid": "whatap-temp",
   "selectors_exclude": [ "article.margin-bottom--lg h2", "article.margin-bottom--lg p" ],
+  "sitemap_urls": [
+    "https://docs.whatap.io/en/sitemap.xml",
+    "https://docs.whatap.io/ja/sitemap.xml",
+    "https://docs.whatap.io/sitemap.xml"
+  ],
   "start_urls": [
     {
       "url": "https://docs.whatap.io/en/openapi-spec",
@@ -104,11 +109,6 @@
       "extra_attributes": { "lang": ["ko"] },
       "page_rank": 1
     }
-  ],
-  "sitemap_urls": [
-    "https://docs.whatap.io/en/sitemap.xml",
-    "https://docs.whatap.io/ja/sitemap.xml",
-    "https://docs.whatap.io/sitemap.xml"
   ],
   "stop_urls": [
     "https://docs.whatap.io/license/license-open-sources",
@@ -250,6 +250,5 @@
 
     }
   },
-  "strip_chars": " .,;:#",
-  "scrape_start_urls": false
+  "strip_chars": " .,;:#"
 }
