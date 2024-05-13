@@ -111,6 +111,12 @@
     }
   ],
   "stop_urls": [
+    "https://docs.whatap.io/openapi-old",
+    "https://docs.whatap.io/en/openapi-old",
+    "https://docs.whatap.io/ja/openapi-old",
+    "https://docs.whatap.io/apidoc/",
+    "https://docs.whatap.io/en/apidoc/",
+    "https://docs.whatap.io/ja/apidoc/",
     "https://docs.whatap.io/license/license-open-sources",
     "https://docs.whatap.io/en/license/license-open-sources",
     "https://docs.whatap.io/ja/license/license-open-sources",
