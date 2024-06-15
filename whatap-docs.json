@@ -1,6 +1,11 @@
 {
   "index_uid": "whatap-temp",
   "selectors_exclude": [ "article.margin-bottom--lg h2", "article.margin-bottom--lg p" ],
+  "sitemap_urls": [
+    "https://docs.whatap.io/en/sitemap.xml",
+    "https://docs.whatap.io/ja/sitemap.xml",
+    "https://docs.whatap.io/sitemap.xml"
+  ],
   "start_urls": [
     {
       "url": "https://docs.whatap.io/en/openapi-spec",
@@ -105,12 +110,13 @@
       "page_rank": 1
     }
   ],
-  "sitemap_urls": [
-    "https://docs.whatap.io/en/sitemap.xml",
-    "https://docs.whatap.io/ja/sitemap.xml",
-    "https://docs.whatap.io/sitemap.xml"
-  ],
   "stop_urls": [
+    "https://docs.whatap.io/openapi-old",
+    "https://docs.whatap.io/en/openapi-old",
+    "https://docs.whatap.io/ja/openapi-old",
+    "https://docs.whatap.io/apidoc/",
+    "https://docs.whatap.io/en/apidoc/",
+    "https://docs.whatap.io/ja/apidoc/",
     "https://docs.whatap.io/license/license-open-sources",
     "https://docs.whatap.io/en/license/license-open-sources",
     "https://docs.whatap.io/ja/license/license-open-sources",
@@ -227,17 +233,17 @@
   "selectors": {
     "default": {
       "lvl0": {
-        "selector": "nav.theme-doc-breadcrumbs ul li:nth-of-type(2) span | .redocusaurus .api-content .api-info h1",
+        "selector": "nav.theme-doc-breadcrumbs ul li:nth-of-type(2) span",
         "global": true,
         "default_value": "Documentation"
       },
-      "lvl1": "header h1 | .redocusaurus h1",
-      "lvl2": "article h2 | .redocusaurus h2",
-      "lvl3": "article h3 | .redocusaurus h3",
+      "lvl1": "header h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
       "lvl4": "article h4",
       "lvl5": "article h5, article td:first-child",
       "lvl6": "article h6",
-      "text": "article .markdown p, article .markdown li, article .markdown td:last-child | .redocusaurus p"
+      "text": "article .markdown p, article .markdown li, article .markdown td:last-child"
     },
     "openapispec": {
       "lvl0":  {
@@ -252,5 +258,5 @@
     }
   },
   "strip_chars": " .,;:#",
-  "scrape_start_urls": false
+  "scrape_start_urls": true
 }
