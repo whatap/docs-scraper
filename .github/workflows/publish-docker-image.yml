@@ -30,4 +30,4 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: getmeili/docs-scraper:latest,getmeili/docs-scraper:${{ github.ref_name }}
+          tags: getmeili/docs-scraper:v0.12.11,getmeili/docs-scraper:${{ github.ref_name }}
