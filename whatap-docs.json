@@ -257,6 +257,6 @@
 
     }
   },
-  "strip_chars": " .,;:#",
+  "strip_chars": " .,;:#\u0000",
   "scrape_start_urls": true
 }
