@@ -37,12 +37,14 @@ class DefaultStrategy(AbstractStrategy):
         if self._body_contains_stop_content(response):
             return []
 
-        self.dom = self.get_dom(response)
-        self.dom = self.remove_from_dom(self.dom,
-                                        self.config.selectors_exclude)
+        # 널 바이트 제거
+        cleaned_body = response.text.replace('\u0000', '')
+
+        # DOM 객체 생성
+        self.dom = self.get_dom(response.replace(body=cleaned_body.encode('utf-8')))
+        self.dom = self.remove_from_dom(self.dom, self.config.selectors_exclude)
 
         records = self.get_records_from_dom(response.url)
-
         return records
 
     def _update_hierarchy_with_global_content(self, hierarchy,

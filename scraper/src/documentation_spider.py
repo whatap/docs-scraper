@@ -162,24 +162,32 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
     def parse_from_sitemap(self, response):
         if self.reason_to_stop is not None:
             raise CloseSpider(reason=self.reason_to_stop)
+        
+        # 널 바이트 제거
+        response_text = response.text.replace('\u0000', '')
 
         if (not self.force_sitemap_urls_crawling) and (
                 not self.is_rules_compliant(response)):
             print("\033[94m> Ignored from sitemap:\033[0m " + response.url)
         else:
-            self.add_records(response, from_sitemap=True)
+            # self.add_records(response, from_sitemap=True)
+            self.add_records(response.replace(body=response_text), from_sitemap=True)
             # We don't return self.parse(response) in order to avoid crawling those web page
 
     def parse_from_start_url(self, response):
         if self.reason_to_stop is not None:
             raise CloseSpider(reason=self.reason_to_stop)
 
+        # 널 바이트 제거
+        response_text = response.text.replace('\u0000', '')
+
         if self.is_rules_compliant(response):
             self.add_records(response, from_sitemap=False)
         else:
             print("\033[94m> Ignored: from start url\033[0m " + response.url)
 
-        return self.parse(response)
+        # return self.parse(response)
+        return self.parse(response.replace(body=response_text))
 
     def is_rules_compliant(self, response):
 
