@@ -169,7 +169,10 @@
     "https://docs.whatap.io/search",
     "https://docs.whatap.io/en/search",
     "https://docs.whatap.io/ja/search",
-    "https://docs.whatap.io/kr/appendix"
+    "https://docs.whatap.io/kr/appendix",
+    "https://docs.whatap.io/blog/",
+    "https://docs.whatap.io/en/blog/",
+    "https://docs.whatap.io/ja/blog/"
   ],
   "custom_settings": {
     "filterableAttributes": ["lang", "hierarchy_lvl0"],
