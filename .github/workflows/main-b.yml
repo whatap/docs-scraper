@@ -1,8 +1,8 @@
-name: Run Docs Scraper 0800
+name: Run Docs Scraper 1400
 
 on:
   schedule:
-  - cron: "0 23 * * *"
+  - cron: "0 07 * * *"
   
 jobs:
   cron:
