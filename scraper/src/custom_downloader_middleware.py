@@ -35,12 +35,7 @@ class CustomDownloaderMiddleware:
             request.url))  # Decode url otherwise firefox is not happy. Ex /#%21/ => /#!/%21
         time.sleep(spider.js_wait)
         body = self.driver.page_source.encode('utf-8')
-        # 널 바이트 제거
-        body = self.driver.page_source.replace('\u0000', '')
-        body = body.encode('utf-8')  # UTF-8로 인코딩
         url = self.driver.current_url
-
-        print(body)
 
         return HtmlResponse(
             url=url,
