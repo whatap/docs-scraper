@@ -1,6 +1,12 @@
 {
   "index_uid": "whatap-temp",
-  "selectors_exclude": [ "article.margin-bottom--lg h2", "article.margin-bottom--lg p" ],
+  "selectors_exclude": [ 
+    "article.margin-bottom--lg h2", 
+    "article.margin-bottom--lg p",
+    "a.navbar__item.navbar__link",
+    "a.dropdown__link",
+    "a.menu__link"
+  ],
   "sitemap_urls": [
     "https://docs.whatap.io/en/sitemap.xml",
     "https://docs.whatap.io/ja/sitemap.xml",
@@ -398,5 +404,5 @@
     }
   },
   "strip_chars": " .,;:#",
-  "scrape_start_urls": true
+  "scrape_start_urls": false
 }
