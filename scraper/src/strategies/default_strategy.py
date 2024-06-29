@@ -112,8 +112,7 @@ class DefaultStrategy(AbstractStrategy):
                     current_page_url):
                 continue
 
-            hierarchy = self._update_hierarchy_with_global_content(hierarchy,
-                                                                   current_level_int)
+            hierarchy = self._update_hierarchy_with_global_content(hierarchy, current_level_int)
 
             # We only save content for the 'text' matches
             content = None if current_level != 'content' else self.get_text(
@@ -123,25 +122,19 @@ class DefaultStrategy(AbstractStrategy):
                     content is None or content == "") and current_level == 'content':
                 continue
 
-            hierarchy, content = self._handle_default_values(hierarchy,
-                                                             content,
-                                                             selectors,
-                                                             self.levels)
+            hierarchy, content = self._handle_default_values(hierarchy, content, selectors, self.levels)
 
             # noinspection PyDictCreation
             record = {
                 'anchor': self._get_closest_anchor(anchors),
                 'content': content,
                 'hierarchy': hierarchy,
-                'hierarchy_radio': Hierarchy.get_hierarchy_radio(hierarchy,
-                                                                 current_level,
-                                                                 levels),
+                'hierarchy_radio': Hierarchy.get_hierarchy_radio(hierarchy, current_level, levels),
                 'type': current_level,
                 'tags': UrlsParser.get_tags(current_page_url,
                                             self.config.start_urls),
                 'weight': {
-                    'page_rank': UrlsParser.get_page_rank(current_page_url,
-                                                          self.config.start_urls),
+                    'page_rank': UrlsParser.get_page_rank(current_page_url, self.config.start_urls),
                     'level': self.get_level_weight(current_level),
                     'position': position
                 },
@@ -184,20 +177,16 @@ class DefaultStrategy(AbstractStrategy):
                     record[attr] = value
 
                 record['url_without_anchor'] = record['url']
-                record['url'] = self._get_url_with_anchor(record['url'],
-                                                          record['anchor'])
+                record['url'] = self._get_url_with_anchor(record['url'], record['anchor'])
                 record['url_without_variables'] = self._get_url_with_anchor(
                     record['url_without_variables'], record['anchor'])
                 record['no_variables'] = record['url'] == record[
                     'url_without_variables']
 
             # Define our own ObjectID to enable proper analytics
-            hierarchy_to_hash = {lvl: x for lvl, x in hierarchy.items() if
-                                 x is not None}
+            hierarchy_to_hash = {lvl: x for lvl, x in hierarchy.items() if x is not None}
             raw_hash = hashlib.sha1(json.dumps(
-                {'hierarchy_to_hash': hierarchy_to_hash,
-                 'url': record['url'],
-                 'position': position}, sort_keys=True).encode('utf-8'))
+                {'hierarchy_to_hash': hierarchy_to_hash, 'url': record['url'], 'position': position}, sort_keys=True).encode('utf-8'))
             digest_hash = raw_hash.hexdigest()
             record['objectID'] = digest_hash
             records.append(record)
@@ -207,24 +196,20 @@ class DefaultStrategy(AbstractStrategy):
     def _get_text_content_for_level(self, node, current_level, selectors):
         if 'attributes' in selectors[current_level]:
             attributes = {}
-            for attribute_name in list(selectors[current_level][
-                                           'attributes'].keys()):
+            for attribute_name in list(selectors[current_level]['attributes'].keys()):
                 matching_nodes = node.xpath(
                     selectors[current_level]['attributes'][attribute_name][
                         'selector'])
                 attributes[attribute_name] = self.get_text_from_nodes(
                     matching_nodes,
-                    self.get_strip_chars(attribute_name,
-                                         selectors[current_level][
-                                             'attributes'])
+                    self.get_strip_chars(attribute_name, selectors[current_level]['attributes'])
                 )
             return attributes
 
         if current_level in self.global_content:
             return self.global_content[current_level]
 
-        return self.get_text(node,
-                             self.get_strip_chars(current_level, selectors))
+        return self.get_text(node, self.get_strip_chars(current_level, selectors))
 
     @staticmethod
     def _get_closest_anchor(anchors):

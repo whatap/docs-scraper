@@ -69,8 +69,7 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
         self.start_urls_full = config.start_urls
         self.start_urls = [start_url['url'] for start_url in config.start_urls]
         # We need to ensure that the stop urls are scheme agnostic too if it represents URL
-        self.stop_urls = [DocumentationSpider.to_any_scheme(stop_url) for
-                          stop_url in config.stop_urls]
+        self.stop_urls = [DocumentationSpider.to_any_scheme(stop_url) for stop_url in config.stop_urls]
         self.meilisearch_helper = meilisearch_helper
         self.strategy = strategy
         self.js_render = config.js_render
@@ -83,8 +82,7 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
 
         # Get rid of scheme consideration
         # Start_urls must stays authentic URL in order to be reached, we build agnostic scheme regex based on those URL
-        start_urls_any_scheme = [DocumentationSpider.to_any_scheme(start_url)
-                                 for start_url in self.start_urls]
+        start_urls_any_scheme = [DocumentationSpider.to_any_scheme(start_url) for start_url in self.start_urls]
         link_extractor = LxmlLinkExtractor(
             allow=start_urls_any_scheme,
             deny=self.stop_urls,
@@ -94,8 +92,7 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
         )
 
         DocumentationSpider.rules = [
-            Rule(link_extractor, callback=self.parse_from_start_url,
-                 follow=True),
+            Rule(link_extractor, callback=self.parse_from_start_url, follow=True),
         ]
 
         # START _init_ part from SitemapSpider
@@ -114,8 +111,7 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
                 print("Neither start url nor regex: default, we scrap all")
                 sitemap_rules = [('.*', 'parse_from_sitemap')]
 
-            self.__init_sitemap_(config.sitemap_urls, sitemap_rules,
-                                 config.sitemap_alternate_links)
+            self.__init_sitemap_(config.sitemap_urls, sitemap_rules, config.sitemap_alternate_links)
             self.force_sitemap_urls_crawling = config.force_sitemap_urls_crawling
 
         # END _init_ part from SitemapSpider
