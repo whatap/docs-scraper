@@ -47,8 +47,7 @@ class DefaultStrategy(AbstractStrategy):
         records = self.get_records_from_dom(response.url)
         return records
 
-    def _update_hierarchy_with_global_content(self, hierarchy,
-                                              current_level_int):
+    def _update_hierarchy_with_global_content(self, hierarchy, current_level_int):
         for index in range(0, current_level_int + 1):
             if f'lvl{index}' in self.global_content:
                 hierarchy[f'lvl{index}'] = self.global_content[
