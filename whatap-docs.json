@@ -535,6 +535,7 @@
       "enabled": false
     },
     "synonyms": {
+      "Agent": [ "에이전트", "agent" ],
       "Log": [ "로그" ],
       "로그": [ "Log", "log" ],
       "Java": [ "자바" ],
