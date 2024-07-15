@@ -1,0 +1,42 @@
+name: Run Docs Backup Scraper(Manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Deployment?"
+        default: "WhaTap"
+  
+jobs:
+  cron:
+    runs-on: ubuntu-20.04
+    name: scraping docs
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'  # Ensure compatibility with your project
+
+      - name: Install Pipenv and Dependencies
+        run: |
+          pip install pipenv
+          pipenv install
+
+      - name: Run Docs Scraper
+        env:
+          MEILISEARCH_HOST_URL: https://constitutional-meagan-whatap-6864b3a7.koyeb.app/
+          MEILISEARCH_API_KEY: whatap-docs-meilisearch-key-fdjalkdfjakd2837123jn12kj3
+        run: pipenv run ./docs_scraper whatap-docs-backup.json
+      
+      # - name: Swap index
+      #   env:
+      #     API_KEY: dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk
+      #   run: |
+      #     curl \
+      #       -X POST 'https://meilsearch.whatap.io/swap-indexes' \
+      #       -H "Authorization: Bearer $API_KEY" \
+      #       -H 'Content-Type: application/json' \
+      #       --data-binary '[ { "indexes": [ "whatap-temp", "whatap" ] } ]'
