@@ -35,6 +35,7 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
     # Could be any url prefix such as http://www or http://
     every_schemes = ["http", "https"]
     reason_to_stop = None
+    seen_urls = set()
 
     @staticmethod
     def to_any_scheme(url):
@@ -96,7 +97,7 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
         ]
 
         # START _init_ part from SitemapSpider
-        # We son't want to check anything if we don't even have a sitemap URL
+        # We don't want to check anything if we don't even have a sitemap URL
         if config.sitemap_urls:
             # In case we don't have a special documentation regex,
             # we assume that start_urls are there to match a documentation part
@@ -132,7 +133,7 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
         for url in self.start_urls:
             yield Request(url,
                           callback=self.parse_from_start_url if self.scrape_start_urls else self.parse,
-                          # If we wan't to crawl (default behavior) without scraping, we still need to let the
+                          # If we want to crawl (default behavior) without scraping, we still need to let the
                           # crawling spider acknowledge the content by parsing it with the built-in method
                           meta={
                               "alternative_links": DocumentationSpider.to_other_scheme(
