@@ -35,7 +35,7 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
     # Could be any url prefix such as http://www or http://
     every_schemes = ["http", "https"]
     reason_to_stop = None
-    seen_urls = set()
+    seen_urls = set()  # 수정된 부분: 중복 URL을 추적하기 위해 set 사용
 
     @staticmethod
     def to_any_scheme(url):
@@ -131,15 +131,17 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
 
         # We crawl the start URL in order to ensure we didn't miss anything (Even if we used the sitemap)
         for url in self.start_urls:
-            yield Request(url,
-                          callback=self.parse_from_start_url if self.scrape_start_urls else self.parse,
-                          # If we want to crawl (default behavior) without scraping, we still need to let the
-                          # crawling spider acknowledge the content by parsing it with the built-in method
-                          meta={
-                              "alternative_links": DocumentationSpider.to_other_scheme(
-                                  url)
-                          },
-                          errback=self.errback_alternative_link)
+            if url not in self.seen_urls:  # 수정된 부분: 이미 방문한 URL인지 확인
+                self.seen_urls.add(url)  # 수정된 부분: 방문한 URL 추가
+                yield Request(url,
+                              callback=self.parse_from_start_url if self.scrape_start_urls else self.parse,
+                              # If we want to crawl (default behavior) without scraping, we still need to let the
+                              # crawling spider acknowledge the content by parsing it with the built-in method
+                              meta={
+                                  "alternative_links": DocumentationSpider.to_other_scheme(
+                                      url)
+                              },
+                              errback=self.errback_alternative_link)
 
     def parse(self, response, **kwargs):
         return super()._parse(response, **kwargs)
@@ -236,10 +238,12 @@ class DocumentationSpider(CrawlSpider, SitemapSpider):
             if len(meta["alternative_links"]) > 0:
                 alternative_link = meta["alternative_links"].pop(0)
                 self.logger.error('Alternative link: %s', alternative_link)
-                yield failure.request.replace(
-                    url=alternative_link,
-                    meta=meta
-                )
+                if alternative_link not in self.seen_urls:  # 수정된 부분: 중복 URL 확인
+                    self.seen_urls.add(alternative_link)  # 수정된 부분: 방문한 URL 추가
+                    yield failure.request.replace(
+                        url=alternative_link,
+                        meta=meta
+                    )
 
                 # Other check available such as DNSLookupError, TimeoutError, TCPTimedOutError)...
 
