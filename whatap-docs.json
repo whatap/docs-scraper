@@ -5,7 +5,8 @@
     "article.margin-bottom--lg p",
     "a.navbar__item.navbar__link",
     "a.dropdown__link",
-    "a.menu__link"
+    "a.menu__link",
+    "div[class*='release_items']"
   ],
   "sitemap_urls": [
     "https://docs.whatap.io/en/sitemap.xml",
