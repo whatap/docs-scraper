@@ -154,6 +154,9 @@
     }
   ],
   "stop_urls": [
+    "https://docs.whatap.io/best-practice-guides/real-time-monitoring-for-it-infra",
+    "https://docs.whatap.io/en/best-practice-guides/real-time-monitoring-for-it-infra",
+    "https://docs.whatap.io/ja/best-practice-guides/real-time-monitoring-for-it-infra",
     "https://docs.whatap.io/openapi-old",
     "https://docs.whatap.io/en/openapi-old",
     "https://docs.whatap.io/ja/openapi-old",
