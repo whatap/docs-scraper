@@ -979,7 +979,9 @@
     "https://docs.whatap.io/ja/url/release-notes",
     "https://docs.whatap.io/ja/url/blog",
     "https://docs.whatap.io/ja/url/whatap-overview",
-    "https://docs.whatap.io/ja/url/learning-guides"
+    "https://docs.whatap.io/ja/url/learning-guides",
+    "https://docs.whatap.io/a/mazon-cloudwatch/set-notice",
+    "https://docs.whatap.io/best-pracice-guides"
   ],
   "custom_settings": {
     "filterableAttributes": ["lang", "hierarchy_lvl0"],
