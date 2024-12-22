@@ -6,7 +6,9 @@
     "a.navbar__item.navbar__link",
     "a.dropdown__link",
     "a.menu__link",
-    "div[class*='release_items']"
+    "div[class*='release_items']",
+    "div.download-pdf",
+    "div.download-release-notes"
   ],
   "sitemap_urls": [
     "https://docs.whatap.io/en/sitemap.xml",
@@ -160,9 +162,6 @@
     "https://docs.whatap.io/dl-release-notes",
     "https://docs.whatap.io/en/dl-release-notes",
     "https://docs.whatap.io/ja/dl-release-notes",
-    "https://docs.whatap.io/reference",
-    "https://docs.whatap.io/en/reference",
-    "https://docs.whatap.io/ja/reference",
     "https://docs.whatap.io/npm/set-agent",
     "https://docs.whatap.io/en/npm/set-agent",
     "https://docs.whatap.io/ja/npm/set-agent",
