@@ -115,42 +115,6 @@
       "url": "https://docs.whatap.io/release-notes/",
       "extra_attributes": { "lang": ["ko"] },
       "page_rank": 1
-    },
-    {
-      "url": "https://docs.whatap.io/reference/changes-analysis-trace",
-      "extra_attributes": { "lang": ["ko"] }
-    },
-    {
-      "url": "https://docs.whatap.io/reference/changes-db-xos-metrics-guide",
-      "extra_attributes": { "lang": ["ko"] }
-    },
-    {
-      "url": "https://docs.whatap.io/reference/cloudwatch-metric-guide",
-      "extra_attributes": { "lang": ["ko"] }
-    },
-    {
-      "url": "https://docs.whatap.io/en/reference/changes-analysis-trace",
-      "extra_attributes": { "lang": ["en"] }
-    },
-    {
-      "url": "https://docs.whatap.io/en/reference/changes-db-xos-metrics-guide",
-      "extra_attributes": { "lang": ["en"] }
-    },
-    {
-      "url": "https://docs.whatap.io/en/reference/cloudwatch-metric-guide",
-      "extra_attributes": { "lang": ["en"] }
-    },
-    {
-      "url": "https://docs.whatap.io/ja/reference/changes-analysis-trace",
-      "extra_attributes": { "lang": ["ja"] }
-    },
-    {
-      "url": "https://docs.whatap.io/ja/reference/changes-db-xos-metrics-guide",
-      "extra_attributes": { "lang": ["ja"] }
-    },
-    {
-      "url": "https://docs.whatap.io/ja/reference/cloudwatch-metric-guide",
-      "extra_attributes": { "lang": ["ja"] }
     }
   ],
   "stop_urls": [
