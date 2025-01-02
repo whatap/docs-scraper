@@ -12,25 +12,18 @@ jobs:
     runs-on: ubuntu-20.04
     name: scraping docs
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.12'  # Ensure compatibility with your project
-
-      - name: Install Pipenv and Dependencies
-        run: |
-          pip install pipenv
-          pipenv install
-
-      - name: Run Docs Scraper
+      - uses: actions/checkout@v4
+      - name: Run scraper
         env:
-          MEILISEARCH_HOST_URL: https://meilsearch.whatap.io
-          MEILISEARCH_API_KEY: dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk
-        run: pipenv run ./docs_scraper whatap-docs.json
-      
+          HOST_URL: https://meilsearch.whatap.io
+          API_KEY: dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk
+          CONFIG_FILE_PATH: ${{ github.workspace }}/whatap-docs.json
+        run: |
+          docker run -t --rm \
+            -e MEILISEARCH_HOST_URL=$HOST_URL \
+            -e MEILISEARCH_API_KEY=$API_KEY \
+            -v $CONFIG_FILE_PATH:/docs-scraper/config.json \
+            getmeili/docs-scraper:v0.12.11 pipenv run ./docs_scraper config.json
       - name: Swap index
         env:
           API_KEY: dgoMBc2t6fVzILDGqhh63uBXACGOmJbKNnE_Xv8_Hqk
