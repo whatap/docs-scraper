@@ -1,3 +1,5 @@
+WhaTap Docs의 검색을 위한 검색 크롤러 저장소입니다.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/meilisearch/integration-guides/main/assets/logos/logo.svg" alt="Meilisearch" width="200" height="200" />
 </p>
