@@ -8,7 +8,8 @@
     "a.menu__link",
     "div[class*='release_items']",
     "div.download-pdf",
-    "div.download-release-notes"
+    "div.download-release-notes",
+    "section#toc"
   ],
   "sitemap_urls": [
     "https://docs.whatap.io/en/sitemap.xml",
