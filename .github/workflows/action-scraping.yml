@@ -6,10 +6,10 @@ on:
       name:
         description: "Deployment?"
         default: "WhaTap"
-  
+
 jobs:
   cron:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     name: scraping docs
     steps:
       - uses: actions/checkout@v4
