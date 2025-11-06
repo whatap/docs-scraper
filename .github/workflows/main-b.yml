@@ -2,7 +2,7 @@ name: Run Docs Scraper 1400
 
 on:
   schedule:
-  - cron: "0 07 * * *"
+  - cron: "0 05 * * *"
   
 jobs:
   cron:
