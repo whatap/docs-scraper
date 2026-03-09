@@ -1,4 +1,4 @@
-name: Run Docs Scraper 1400
+name: Run Docs Scraper Secondary
 
 on:
   workflow_dispatch:
