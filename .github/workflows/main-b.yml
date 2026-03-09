@@ -1,8 +1,7 @@
 name: Run Docs Scraper 1400
 
 on:
-  schedule:
-  - cron: "00 05 * * *"
+  workflow_dispatch:
   
 jobs:
   cron:

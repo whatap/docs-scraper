@@ -2,9 +2,19 @@ name: Run Docs Scraper 1830
 
 on:
   schedule:
-  - cron: "30 12 * * *"
-  
+  - cron: "00 05 * * *"
+  workflow_dispatch:
+
 jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    name: keep alive
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/keepalive-workflow@v2
+
   cron:
     runs-on: ubuntu-24.04
     name: scraping docs
